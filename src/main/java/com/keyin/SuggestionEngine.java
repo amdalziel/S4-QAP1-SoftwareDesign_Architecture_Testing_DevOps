@@ -51,6 +51,7 @@ public class SuggestionEngine {
 
     /**
      * Will generate a list of suggested corrections, limited by the top 10 most likely for the given word.
+     *
      * @param word the word to find correction suggestions for
      * @return a String of words delimited by '\n' or an empty string if word is correct
      */
@@ -100,6 +101,8 @@ public class SuggestionEngine {
         SuggestionEngine suggestionEngine = new SuggestionEngine();
         suggestionEngine.loadDictionaryData(Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
-        System.out.println(suggestionEngine.generateSuggestions(args[0]));
+//        System.out.println(suggestionEngine.generateSuggestions(args[0]));
+
+        System.out.println(suggestionEngine.generateSuggestions("ABCD"));
     }
 }
