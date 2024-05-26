@@ -20,7 +20,7 @@ public class SuggestionEngineTest {
     }
 
     @Test
-    public void testNoMoreTenResultsFound() throws Exception {
+    public void testNoMoreThanTenResultsFound() throws Exception {
         suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
         String hellwSearchResult = suggestionEngine.generateSuggestions("hellw");
