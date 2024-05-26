@@ -49,7 +49,7 @@ public class SuggestionEngineTest {
 
         Assertions.assertNotNull(suggestionEngine.generateSuggestions("hello"));
         Assertions.assertTrue(suggestionEngine.generateSuggestions("hello").equalsIgnoreCase(""));
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hello").equalsIgnoreCase("hello"));
+        Assertions.assertTrue(suggestionEngine.generateSuggestions("hello").equalsIgnoreCase("hello"));
 
 
     }
