@@ -13,9 +13,9 @@ public class SuggestionEngineTest {
     public void testOnlySimilarWordsFound() throws Exception {
         suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("pizza"));
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("car"));
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("canada"));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("helically"));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("heliced"));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("helicin"));
 
     }
 
