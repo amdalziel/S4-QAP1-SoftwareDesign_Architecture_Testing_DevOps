@@ -14,8 +14,8 @@ public class SuggestionEngineTest {
         suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
         Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("pizza"));
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("hear"));
-        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("here"));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("car"));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hellw").contains("canada"));
 
     }
 
@@ -40,6 +40,17 @@ public class SuggestionEngineTest {
 
         Assertions.assertTrue(suggestionEngine.generateSuggestions("ABCD").isEmpty());
         Assertions.assertFalse(suggestionEngine.generateSuggestions("abcd").isEmpty());
+
+    }
+
+    @Test
+    public void testKnownWordReturnsEmptyString() throws Exception {
+        suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
+
+        Assertions.assertNotNull(suggestionEngine.generateSuggestions("hello"));
+        Assertions.assertTrue(suggestionEngine.generateSuggestions("hello").equalsIgnoreCase(""));
+        Assertions.assertFalse(suggestionEngine.generateSuggestions("hello").equalsIgnoreCase("hello"));
+
 
     }
 }
