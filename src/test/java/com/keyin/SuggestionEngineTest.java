@@ -38,7 +38,7 @@ public class SuggestionEngineTest {
     public void testNoUpperCaseLettersInDictionary() throws Exception {
         suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
-        Assertions.assertTrue(suggestionEngine.generateSuggestions("ABCD").isEmpty());
+        Assertions.assertTrue(suggestionEngine.generateSuggestions("ABDC").isEmpty());
         Assertions.assertFalse(suggestionEngine.generateSuggestions("abcd").isEmpty());
 
     }
