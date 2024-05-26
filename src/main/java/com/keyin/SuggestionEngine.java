@@ -103,6 +103,6 @@ public class SuggestionEngine {
 
 //        System.out.println(suggestionEngine.generateSuggestions(args[0]));
 
-        System.out.println(suggestionEngine.generateSuggestions("ABCD"));
+        System.out.println(suggestionEngine.generateSuggestions("hellw"));
     }
 }
